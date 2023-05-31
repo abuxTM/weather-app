@@ -20,11 +20,15 @@ if __name__ == "__main__":
         'font:',
         'font_size:',
     ]
-
-    main = Gui(fs(sett[0]),
-               fs(sett[1]),
-               fs(sett[2]),
-               fs(sett[3]),
-               fs(sett[4]),
-               fs(sett[5]))
-    main.run()
+    
+    try:
+        main = Gui(fs(sett[0]),
+                fs(sett[1]),
+                fs(sett[2]),
+                fs(sett[3]),
+                fs(sett[4]),
+                fs(sett[5]))
+        main.run()
+    except:
+        print('Failed or missing api key')
+        quit()
